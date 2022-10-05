@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">week3InClass</string>
+    <string name="spin_prompt">Choose Province</string>
+    <array name="provinces">
+        <item>Alberta</item>
+        <item>British Colombia</item>
+        <item>Manitoba</item>
+        <item>New Brunswick</item>
+        <item>Nova Scotia</item>
+        <item>Ontario</item>
+        <item>Prince Edward Island</item>
+        <item>Saskatchewan</item>
+        <item>Quebec</item>
+    </array>
+</resources>
