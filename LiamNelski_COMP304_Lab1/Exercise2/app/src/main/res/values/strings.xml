@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Exercise2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <array name="user_activities">
+        <item>AIActivity</item>
+        <item>VRActivity</item>
+    </array>
+</resources>
