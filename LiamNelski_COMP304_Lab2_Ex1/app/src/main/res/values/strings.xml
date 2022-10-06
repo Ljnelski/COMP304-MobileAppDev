@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">LiamNelski_COMP304_Lab2_Ex1</string>
+    <array name="houseTypes">
+        <item>Apartment</item>
+        <item>Detached Home</item>
+        <item>Semi-Detached Home</item>
+        <item>Condominium</item>
+        <item>Town House</item>
+    </array>
+</resources>
