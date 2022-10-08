@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Animations Example</string>
+
+    <string
+        name="tween">Tweened Animation Example</string>
+
+    <string-array name="activities">
+
+        <item>TweenActivity</item>
+        <item>TweenLayoutActivity</item>
+
+
+    </string-array>
+</resources>
