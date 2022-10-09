@@ -3,16 +3,22 @@ package com.example.week4inclass;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private String contact = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,20 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });
+            }
+        });
+
+        // Register Context menu to the listview
+        ListView listView = findViewById(R.id.contactListView);
+        TextView tv = findViewById(R.id.contactListTextView);
+
+        registerForContextMenu(listView);
+        registerForContextMenu(tv);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                contact = adapterView.getAdapter().getItem(i).toString();
             }
         });
     }
@@ -67,5 +87,35 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return true;
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu, menu);
+        menu.setHeaderTitle("Select The Action");
+    }
+
+    @Override
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.call) {
+            Toast.makeText(MainActivity.this, "Calling " + contact, Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId() == R.id.sms) {
+            Toast.makeText(MainActivity.this, "SMS " + contact, Toast.LENGTH_SHORT).show();
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    public void openActionBarActivity(View view) {
+        Intent intent = new Intent(this, ActionBarActivity.class);
+        startActivity(intent);
+    }
+
+    public void openPrefActionBarActivity(View view) {
+        Intent intent = new Intent(this, SharedPrefActivity.class);
+        startActivity(intent);
     }
 }
