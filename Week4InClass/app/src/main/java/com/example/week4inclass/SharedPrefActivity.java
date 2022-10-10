@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.Toast;
-
 public class SharedPrefActivity extends AppCompatActivity {
     EditText firstName, lastName;
 
