@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.12" />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/houseList"
         android:layout_width="403dp"
         android:layout_height="467dp"

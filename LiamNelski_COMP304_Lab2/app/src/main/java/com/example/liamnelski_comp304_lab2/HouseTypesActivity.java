@@ -1,6 +1,8 @@
 package com.example.liamnelski_comp304_lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuInflater;
@@ -13,8 +15,10 @@ import android.widget.PopupMenu;
 import java.util.ArrayList;
 
 public class HouseTypesActivity extends AppCompatActivity {
-
+    private RecyclerView recyclerView;
     private HouseAdapter houseAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +62,22 @@ public class HouseTypesActivity extends AppCompatActivity {
             }
 
         });
-        // Set up listView
-        ListView listView = findViewById(R.id.houseList);
-        houseAdapter = new HouseAdapter(HouseTypesActivity.this, HouseDatabase.getHouseData(HouseType.NULL));
-        listView.setAdapter(houseAdapter);
+        // Set up RecyclerView
+
+        recyclerView = findViewById(R.id.houseList);
+
+        // recyclerView.setHasFixedSize(true);
+
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        houseAdapter = new HouseAdapter(this, HouseDatabase.getHouseData(HouseType.NULL));
+        recyclerView.setAdapter(houseAdapter);
     }
 
     public void updateHouseList(HouseType targetHouse) {
         ArrayList<House> newHouses = HouseDatabase.getHouseData(targetHouse);
-
-        houseAdapter.houses = newHouses;
+        houseAdapter.updateData(newHouses);
         houseAdapter.notifyDataSetChanged();
     }
 }
