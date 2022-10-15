@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -26,6 +27,16 @@ public class HouseTypesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_house_types);
 
         Button chooseHouseTypeButton = findViewById(R.id.chooseHouseTypeButton);
+        Button checkoutHouse = findViewById(R.id.checkOutButton);
+
+        // > Set up checkout Button
+        checkoutHouse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HouseTypesActivity.this, CheckoutActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // > Set up Menu
         chooseHouseTypeButton.setOnClickListener(new View.OnClickListener() {
@@ -65,9 +76,6 @@ public class HouseTypesActivity extends AppCompatActivity {
         // Set up RecyclerView
 
         recyclerView = findViewById(R.id.houseList);
-
-        // recyclerView.setHasFixedSize(true);
-
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
