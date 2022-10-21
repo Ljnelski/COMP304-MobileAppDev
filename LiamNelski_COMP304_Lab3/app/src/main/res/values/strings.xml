@@ -3,12 +3,11 @@
     <string name="title_activity_exercise_three">ExerciseThree</string>
 
     <string-array name="penThickness">
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>8</item>
         <item>10</item>
         <item>15</item>
         <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
     </string-array>
 </resources>

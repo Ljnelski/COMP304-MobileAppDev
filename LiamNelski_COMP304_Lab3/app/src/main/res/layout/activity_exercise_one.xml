@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/upImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
@@ -52,29 +52,29 @@
         app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/rightImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/upImageView"
+        app:layout_constraintTop_toBottomOf="@+id/upImageView"
         app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/downImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/upImageView"
+        app:layout_constraintStart_toStartOf="@+id/upImageView"
+        app:layout_constraintTop_toBottomOf="@+id/upImageView"
         app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/leftImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/upImageView"
+        app:layout_constraintTop_toBottomOf="@+id/upImageView"
         app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
     <Spinner
@@ -83,9 +83,11 @@
         android:layout_height="21dp"
         app:layout_constraintEnd_toEndOf="@+id/lineThicknessTextView"
         app:layout_constraintStart_toStartOf="@+id/lineThicknessTextView"
-        app:layout_constraintTop_toBottomOf="@+id/lineThicknessTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/lineThicknessTextView"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <RadioGroup
+        android:id="@+id/colorRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/lineColorTextView"
@@ -117,7 +119,8 @@
             android:scaleX="0.75"
             android:scaleY="0.75"
             android:text="Black"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </RadioGroup>
 
     <Button
@@ -140,5 +143,25 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/yValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/clearCanvasButton"
+        app:layout_constraintStart_toEndOf="@+id/clearCanvasButton"
+        app:layout_constraintTop_toTopOf="@+id/clearCanvasButton"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/xValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/clearCanvasButton"
+        app:layout_constraintStart_toEndOf="@+id/clearCanvasButton"
+        app:layout_constraintTop_toTopOf="@+id/clearCanvasButton"
+        app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
