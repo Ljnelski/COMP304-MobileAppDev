@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.liamnelski_comp304_lab3">
+    package="com.example.liamnelski_comp304_lab3" >
 
     <application
         android:allowBackup="true"
@@ -12,12 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LiamNelski_COMP304_Lab3"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
             android:name=".ExerciseThree"
-            android:exported="false"
-            android:label="@string/title_activity_exercise_three"
-            android:theme="@style/Theme.LiamNelski_COMP304_Lab3.NoActionBar" />
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseOne"
+            android:exported="false" />
         <activity
             android:name=".ExerciseTwo"
             android:exported="false" />
@@ -26,7 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
