@@ -1,0 +1,16 @@
+package com.example.roomexampleapplication;
+
+import androidx.room.Dao;
+import androidx.room.Insert;
+import androidx.room.Query;
+
+import java.util.List;
+
+@Dao
+public interface MyDataAccessObject {
+    @Insert
+    public void addUser(User user);
+
+    @Query("select * from user")
+    public List<User> getUsers();
+}
