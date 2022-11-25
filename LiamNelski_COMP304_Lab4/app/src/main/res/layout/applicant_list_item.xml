@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/listItemApplicantTestDataButton"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginEnd="12dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Tests"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/listItemApplicantEditButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/listItemApplicantEditButton"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="Edit"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listItemApplicantTestCentreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        android:text="Driving Centre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/listItemApplicantFirstNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/listItemApplicantFirstNameTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/listItemApplicantLastNameTextView"
+        android:layout_width="180dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="4dp"
+        android:text="Lastname"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/listItemApplicantIdTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/listItemApplicantFirstNameTextView"
+        android:layout_width="180dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:text="Firstname"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/listItemApplicantLastNameTextView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/listItemApplicantLastNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/listItemApplicantLastNameTextView" />
+
+    <TextView
+        android:id="@+id/listItemApplicantIdTextView"
+        android:layout_width="51dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="4dp"
+        android:text="nnnn"
+        android:textAlignment="viewStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

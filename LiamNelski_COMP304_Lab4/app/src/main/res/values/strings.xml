@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LiamNelski_COMP304_Lab4</string>
+    <array name="testResults">
+        <item>PASSED</item>
+        <item>FAILED</item>
+    </array>
+    <array name="testTypes">
+        <item>G1</item>
+        <item>G2</item>
+        <item>G</item>
+        <item>m1</item>
+        <item>m2</item>
+        <item>m</item>
+    </array>
+</resources>
